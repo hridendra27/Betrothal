@@ -1661,7 +1661,7 @@ iframe {
         // Example: /Betrothal/Espousal.html -> "Espousal"
         const pageName =atob( decodeURIComponent(
             window.location.pathname.split('/').pop()
-        ).replace(/\.[^/.]+$/, ''));
+        ).replace(/\.[^/.]+$/, ''))+' & Bhabhi jee';
 
         // Countdown to the big day — simple, normal text (no flip clock)
         const weddingDate = new Date("October 31, 2026 19:00:00").getTime();
