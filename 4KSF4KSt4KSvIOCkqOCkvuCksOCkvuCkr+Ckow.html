@@ -14,54 +14,205 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Rozha+One&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- WhatsApp / Facebook Preview -->
-<title>शुभ विवाह | Hridendra ❤️ Shrishti</title>
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="शुभ विवाह | Hridendra ❤️ Shrishti">
-<meta property="og:description"
-      content="सप्रेम आमंत्रण! Join us in celebrating the wedding of Hridendra & Shrishti on 11 December 2026.">
-
-<meta property="og:image"
-      content="https://hridendra27.github.io/Betrothal/pre.png">
-
-<meta property="og:image:secure_url"
-      content="https://hridendra27.github.io/Betrothal/pre.png">
-
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1536">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:alt"
-      content="Shubh Vivah - Hridendra and Shrishti - 11 December 2026">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="शुभ विवाह | Hridendra ❤️ Shrishti">
-<meta name="twitter:description"
-      content="Hridendra & Shrishti | 11 December 2026">
-<meta name="twitter:image"
-      content="https://hridendra27.github.io/Betrothal/pre.png">
-
   <style>
-    .ganesh-above-names {
-  display: block;
-  width: 205px;
-  height: 205px;
-  max-width: 100%;
-  object-fit: contain;
-  object-position: center;
-  margin: 6px auto 10px;
-  position: relative;
-  z-index: 2;
+    /* All-Four-Corners Viewport Swastik Overlay */
+.viewport-swastik-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
 }
 
-/* Mobile screens */
-@media (max-width: 480px) {
-  .ganesh-above-names {
-    width: 68px;
-    height: 68px;
-    margin: 4px auto 7px;
+.viewport-swastik {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.55));
+}
+
+.viewport-swastik.swastik-top-left {
+  top: 10px;
+  left: 10px;
+}
+
+.viewport-swastik.swastik-top-right {
+  top: 10px;
+  right: 10px;
+}
+
+.viewport-swastik.swastik-bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
+.viewport-swastik.swastik-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+@media (max-width: 639px) {
+  .viewport-swastik {
+    width: 30px;
+    height: 30px;
+  }
+
+  .viewport-swastik.swastik-top-left {
+    top: 7px;
+    left: 7px;
+  }
+
+  .viewport-swastik.swastik-top-right {
+    top: 7px;
+    right: 7px;
+  }
+
+  .viewport-swastik.swastik-bottom-left {
+    bottom: 7px;
+    left: 7px;
+  }
+
+  .viewport-swastik.swastik-bottom-right {
+    bottom: 7px;
+    right: 7px;
   }
 }
+    /* Refined Royal Header Countdown Strip */
+.header-countdown-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+    rgba(58, 4, 14, 0.25) 0%,
+    rgba(92, 12, 26, 0.78) 50%,
+    rgba(58, 4, 14, 0.25) 100%);
+  border: 1px solid rgba(217, 167, 74, 0.45);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.header-countdown-label {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f3d27a;
+  letter-spacing: 0.3px;
+}
+
+.header-countdown-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff6dc;
+}
+
+.header-time-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(24, 2, 6, 0.65);
+  border: 1px solid rgba(247, 217, 126, 0.35);
+}
+
+.header-time-chip strong {
+  color: #f7d97e;
+  font-size: 11.5px;
+}
+
+.header-time-chip span {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 9.5px;
+  font-weight: 500;
+  color: #e6c885;
+}
+
+@media (max-width: 639px) {
+  .header-countdown-bar {
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 14px;
+  }
+  .header-countdown-label {
+    font-size: 10px;
+  }
+  .header-countdown-clock {
+    font-size: 10px;
+    gap: 3px;
+  }
+  .header-time-chip {
+    padding: 1px 5px;
+  }
+  .header-time-chip strong {
+    font-size: 10.5px;
+  }
+  .header-time-chip span {
+    font-size: 8.5px;
+  }
+}
+    /* Top Header Live Countdown Pill */
+.header-countdown-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(58, 4, 14, 0.72);
+  border: 1px solid rgba(217, 167, 74, 0.65);
+  color: #fce7ad;
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+.header-countdown-pill strong {
+  color: #f7d97e;
+  font-weight: 700;
+}
+
+@media (max-width: 639px) {
+  .header-countdown-pill {
+    font-size: 9.5px;
+    padding: 3px 8px;
+    gap: 4px;
+  }
+}
+    .ganesh-above-names {
+      display: block;
+      width: 205px;
+      height: 205px;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
+      margin: 6px auto 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Mobile screens */
+    @media (max-width: 480px) {
+      .ganesh-above-names {
+        width: 68px;
+        height: 68px;
+        margin: 4px auto 7px;
+      }
+    }
+
     :root {
       --maroon-deep: #3a040e;
       --maroon-rich: #640b1c;
@@ -77,7 +228,57 @@
       box-sizing: border-box;
       -webkit-tap-highlight-color: transparent;
     }
+/* Wedding Message Modal */
+#weddingMsgModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 2, 5, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
 
+.wedding-modal-content {
+  background: linear-gradient(135deg, #fffdf8 0%, #f9efd9 60%, #f1e1c0 100%);
+  color: #3a0812;
+  padding: 26px 22px;
+  border-radius: 16px;
+  border: 2px solid #c8963e;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), inset 0 0 24px rgba(196, 143, 53, 0.2);
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.wedding-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #8a1326;
+  background: none;
+  border: none;
+}
+
+.wedding-modal-quote {
+  font-family: 'Cormorant Garamond', 'Noto Serif Devanagari', serif;
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: #4a0b16;
+  margin: 14px 0 6px;
+  padding: 14px 16px;
+  background: rgba(255, 250, 240, 0.65);
+  border-top: 1px solid rgba(180, 139, 67, 0.45);
+  border-bottom: 1px solid rgba(180, 139, 67, 0.45);
+  border-radius: 12px;
+}
     body {
       margin: 0;
       padding: 0;
@@ -117,215 +318,144 @@
       pointer-events: none;
       z-index: 1;
     }
-.memory-collage {
-    display: grid;
-    grid-template-columns: 1.08fr .92fr;
-    grid-template-rows: 1.08fr .82fr .82fr;
-    gap: 9px;
-    flex: 1;
-    min-height: 0;
-    padding: 4px 2px;
-}
 
-/* PAGE 4 COMPLETE LAYOUT */
-.page4-layout {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 0;
-    padding: 15px 13px 10px;
-    overflow: hidden;
-}
-
-/* Shloka */
-.page4-shloka {
-    flex: 0 0 auto;
-    padding: 9px 6px;
-    margin: 0 4px 8px;
-    border-radius: 12px;
-    
-}
-
-/* Image takes available middle space */
-.page4-image-section {
-    flex: 1 1 auto;
-    min-height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-}
-
-.page4-image-box {
-    width: 100%;
-    max-width: 290px;
-    height: 100%;
-    max-height: 190px;
-    min-height: 100px;
-    padding: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.page4-image-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-}
-
-/* Welcome section */
-.page4-welcome {
-    flex: 0 0 auto;
-    padding: 8px 3px;
-    border-top: 1px solid rgba(158, 109, 31, .4);
-}
-
-.page4-venue {
-    flex: 0 0 auto;
-    padding: 8px 3px 9px;
-    border-top: 1px dashed rgba(158, 109, 31, .5);
-}
-
-.page4-map-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 8px 15px;
-    border-radius: 25px;
-    background: #8a1326;
-    color: #fff5df !important;
-    border: 1px solid #c99a48;
-    text-decoration: none !important;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    box-shadow: 0 3px 8px rgba(69, 9, 20, .2);
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-}
-
-.page4-map-button:hover {
-    background: #a51d34;
-}
-
-/* Footer */
-.page4-footer {
-    flex: 0 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 6px;
-    border-top: 1px solid rgba(158, 109, 31, .3);
-    color: #7a1425;
-    font-family: inherit;
-    font-size: 9px;
-}
-
-/* Compact screens */
-@media (max-height: 650px) {
+    /* PAGE 4 COMPLETE LAYOUT */
     .page4-layout {
-        padding: 9px 10px 6px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 15px 13px 10px;
+      overflow: hidden;
     }
 
     .page4-shloka {
-        padding: 5px;
-        margin-bottom: 4px;
+      flex: 0 0 auto;
+      padding: 9px 6px;
+      margin: 0 4px 8px;
+      border-radius: 12px;
     }
 
     .page4-image-section {
-        min-height: 65px;
-        padding: 2px 0;
+      flex: 1 1 auto;
+      min-height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
     }
 
     .page4-image-box {
-        max-height: 135px;
+      width: 100%;
+      max-width: 290px;
+      height: 100%;
+      max-height: 190px;
+      min-height: 100px;
+      padding: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page4-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .page4-welcome {
-        padding: 5px 2px;
+      flex: 0 0 auto;
+      padding: 8px 3px;
+      border-top: 1px solid rgba(158, 109, 31, .4);
     }
 
     .page4-venue {
+      flex: 0 0 auto;
+      padding: 8px 3px 9px;
+      border-top: 1px dashed rgba(158, 109, 31, .5);
+    }
+
+   /* Desktop: only allow pointer events on visible faces */
+@media (min-width: 860px) {
+  .page-face {
+    pointer-events: none;
+  }
+  .page-face.desktop-visible {
+    pointer-events: auto;
+  }
+}
+
+.page4-map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 15px;
+  border-radius: 25px;
+  background: #8a1326;
+  color: #fff5df !important;
+  border: 1px solid #c99a48;
+  text-decoration: none !important;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  box-shadow: 0 3px 8px rgba(69, 9, 20, .2);
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+  transform: translateZ(2px);
+  pointer-events: auto;
+}
+
+    .page4-map-button:hover {
+      background: #a51d34;
+    }
+
+    .page4-footer {
+      flex: 0 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 6px;
+      border-top: 1px solid rgba(158, 109, 31, .3);
+      color: #7a1425;
+      font-family: inherit;
+      font-size: 9px;
+    }
+
+    @media (max-height: 650px) {
+      .page4-layout {
+        padding: 9px 10px 6px;
+      }
+      .page4-shloka {
+        padding: 5px;
+        margin-bottom: 4px;
+      }
+      .page4-image-section {
+        min-height: 65px;
+        padding: 2px 0;
+      }
+      .page4-image-box {
+        max-height: 135px;
+      }
+      .page4-welcome, .page4-venue {
         padding: 5px 2px;
-    }
-
-    .page4-map-button {
+      }
+      .page4-map-button {
         padding: 6px 12px;
+      }
     }
-}
 
-.memory-tall {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-}
-
-.memory-wide {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.memory-small {
-    grid-column: 2;
-}
-
-.memory-stamp {
-    grid-column: 1;
-    grid-row: 3;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    min-height: 0;
-    padding: 8px;
-
-    background: linear-gradient(145deg, #fff8e9, #f8e8c5);
-    border: 2px solid #d8a13e;
-    border-radius: 15px;
-
-    box-shadow:
-        inset 0 0 0 3px #fff9e9,
-        inset 0 0 0 4px #e8bd70,
-        0 4px 9px rgba(95, 48, 10, .15);
-}
-
-.memory-stamp img {
-    width: 76%;
-    height: 72%;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-
-.stamp-ornament {
-    color: #a36a1b;
-    font-size: 17px;
-    line-height: 1;
-    letter-spacing: 2px;
-}
-
-.stamp-top {
-    margin-top: 1px;
-}
-
-.stamp-bottom {
-    margin-bottom: 1px;
-    transform: rotate(180deg);
-}
     /* Typography Helpers */
     .font-rozha { font-family: 'Rozha One', 'Noto Serif Devanagari', serif; }
     .font-devanagari { font-family: 'Noto Serif Devanagari', serif; }
     .font-cinzel { font-family: 'Cinzel Decorative', serif; }
-
     .font-cormorant { font-family: 'Cormorant Garamond', serif; }
 
     /* Handwritten styling for the personalized recipient */
@@ -343,7 +473,6 @@
     @media (max-width: 480px) {
       .recipient-handwritten { font-size: 14px; line-height: 1.35; }
     }
-
 
     /* Gold Foil Text Shimmer */
     .gold-foil-text {
@@ -382,10 +511,7 @@
       justify-content: center;
     }
 
-    /* 3D Flipbook Book Container
-       Desktop: Displays a 2-page spread when open (Pages 2 & 3), centered when closed (Page 1 or Page 4)
-       Mobile: Responsive single-leaf 3D flip mode so text remains large, crisp & easily readable!
-    */
+    /* 3D Flipbook Book Container */
     .book-3d {
       position: relative;
       width: min(88vw, 400px);
@@ -400,7 +526,6 @@
         width: 430px;
         height: 625px;
       }
-      /* Shift center when book is opened to show 2-page spread nicely */
       .book-3d.spread-open {
         transform: translateX(50%);
       }
@@ -426,19 +551,56 @@
       transform: rotateY(-180deg);
     }
 
-    /* Mobile Single-Page View Adjustment:
-       On narrow screens (< 860px), rotating -180deg around left edge would move the back face off-screen left.
-       Instead, on mobile we use a smooth 3D page-turn carousel / center-pivot fold so every page stays centered in viewport! */
+    /* Mobile Single-Page View Adjustment (< 860px) */
     @media (max-width: 859px) {
+      .book-3d {
+        transform-style: flat;
+      }
       .leaf {
+        transform-style: flat;
         transform-origin: center center;
-        transition: transform 0.75s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.45s ease;
+        transform: none !important;
+        transition: none !important;
+        pointer-events: none;
+      }
+      .leaf.active-leaf {
+        pointer-events: auto;
+        z-index: 20 !important;
       }
       .page-face {
         position: absolute;
         inset: 0;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        transform-origin: center center;
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                    opacity 0.4s ease,
+                    visibility 0s linear 0.55s;
+        will-change: transform, opacity;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .page-face.mobile-active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: perspective(1400px) rotateY(0deg) translateX(0) scale(1);
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+                    opacity 0.4s ease,
+                    visibility 0s linear 0s;
+      }
+      .page-face.mobile-prev {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: perspective(1400px) rotateY(-18deg) translateX(-28px) scale(0.96);
+      }
+      .page-face.mobile-next {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: perspective(1400px) rotateY(18deg) translateX(28px) scale(0.96);
       }
     }
 
@@ -457,7 +619,6 @@
         0 4px 12px rgba(0, 0, 0, 0.35),
         inset 0 0 32px rgba(178, 128, 48, 0.16);
       background-color: var(--parchment-light);
-      /* Subtle handmade cotton paper fiber texture */
       background-image:
         radial-gradient(rgba(196, 150, 74, 0.08) 1px, transparent 0),
         linear-gradient(135deg, #fffdf8 0%, #f9efd9 55%, #f1e1c0 100%);
@@ -466,14 +627,16 @@
       flex-direction: column;
     }
 
-    /* Back face of a leaf (Page 2 & Page 4 on Desktop) */
-    .page-back {
-      transform: rotateY(180deg);
-      border-radius: 16px 6px 6px 16px;
-      box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.55),
-        inset -12px 0 24px rgba(72, 16, 24, 0.12),
-        inset 0 0 32px rgba(178, 128, 48, 0.16);
+    /* Back face of a leaf (Page 2, Page 4 & Page 6 on Desktop) */
+    @media (min-width: 860px) {
+      .page-back {
+        transform: rotateY(180deg);
+        border-radius: 16px 6px 6px 16px;
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.55),
+          inset -12px 0 24px rgba(72, 16, 24, 0.12),
+          inset 0 0 32px rgba(178, 128, 48, 0.16);
+      }
     }
 
     /* Realistic Book Spine Shadow & Paper Edge Thickness */
@@ -565,27 +728,6 @@
     .corner-bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
     .corner-br { bottom: 4px; right: 4px; transform: scale(-1, -1); }
 
-    /* Page Turn Curl Hint on Hover */
-    .page-curl-hint {
-      position: absolute;
-      bottom: 8px;
-      right: 10px;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: rgba(138, 19, 38, 0.1);
-      color: #7d1424;
-      border: 1px solid rgba(196, 143, 53, 0.45);
-      pointer-events: none;
-      z-index: 20;
-      transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-    .cover-front-theme .page-curl-hint {
-      background: rgba(247, 217, 126, 0.16);
-      color: #fae094;
-      border-color: rgba(247, 217, 126, 0.5);
-    }
-
     /* Event Timeline Card Styling on Page 3 */
     .event-pill {
       background: linear-gradient(135deg, rgba(255, 250, 238, 0.92), rgba(247, 232, 201, 0.85));
@@ -643,18 +785,120 @@
       animation: subtlePulseGlow 3.5s infinite ease-in-out;
     }
 
-    /* New pages: royal gold video frame and asymmetrical memory collage */
-    .video-gold-frame { padding: 7px; border: 2px solid #c8963e; border-radius: 18px; background: linear-gradient(135deg,#fff3c7,#a97825 35%,#f7d97e 55%,#805116); box-shadow: 0 8px 22px rgba(58,4,14,.25), inset 0 0 0 2px rgba(255,255,255,.45); }
-    .wedding-video { display:block; width:100%; aspect-ratio: 9 / 12; max-height: 390px; object-fit: contain; background:#18050a; border-radius:11px; }
-    .memory-collage { width:100%; display:grid; grid-template-columns:1.08fr .92fr; grid-template-rows:1.08fr .82fr; gap:9px; flex:1; min-height:0; padding:4px 2px; }
-    .memory-photo { min-width:0; min-height:0; margin:0; padding:4px; border:1.5px solid #c8963e; border-radius:10px; background:linear-gradient(135deg,#fff8e8,#ead4a6); box-shadow:0 4px 12px rgba(58,4,14,.18); display:flex; flex-direction:column; overflow:hidden; }
-    .memory-photo img { width:100%; height:100%; min-height:0; flex:1; object-fit:cover; border-radius:6px; background:linear-gradient(135deg,#f8ecd2,#dfc18b); }
-    .memory-photo figcaption { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:11px; color:#6b3f0e; padding-top:3px; }
-    .memory-tall { grid-row:1 / span 2; }
-    .memory-wide { grid-column:2; grid-row:1; }
-    .memory-small { grid-column:2; }
-    @media(max-width:859px) { .wedding-video { max-height: min(42vh,360px); } .memory-collage { gap:7px; } }
+    /* Page 5 Video & Page 6 Asymmetrical Memory Collage */
+    .video-gold-frame {
+      padding: 7px;
+      border: 2px solid #c8963e;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff3c7, #a97825 35%, #f7d97e 55%, #805116);
+      box-shadow: 0 8px 22px rgba(58, 4, 14, .25), inset 0 0 0 2px rgba(255, 255, 255, .45);
+    }
+    .wedding-video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 12;
+      max-height: 390px;
+      object-fit: contain;
+      background: #18050a;
+      border-radius: 11px;
+    }
 
+    .memory-collage {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      flex: 1;
+      min-height: 0;
+      padding: 4px 2px;
+    }
+    .memory-photo {
+      min-width: 0;
+      min-height: 0;
+      margin: 0;
+      padding: 4px;
+      border: 1.5px solid #c8963e;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #fff8e8, #ead4a6);
+      box-shadow: 0 4px 12px rgba(58, 4, 14, .18);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .memory-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      flex: 1;
+      object-fit: cover;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #f8ecd2, #dfc18b);
+    }
+    .memory-photo figcaption {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 11px;
+      line-height: 1.2;
+      color: #6b3f0e;
+      padding-top: 3px;
+      flex-shrink: 0;
+    }
+    .memory-tall {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+    .memory-wide {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .memory-small {
+      grid-column: 2;
+    }
+    .memory-stamp {
+      grid-column: 1;
+      grid-row: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 0;
+      padding: 6px;
+      background: linear-gradient(145deg, #fff8e9, #f8e8c5);
+      border: 2px solid #d8a13e;
+      border-radius: 15px;
+      box-shadow:
+        inset 0 0 0 3px #fff9e9,
+        inset 0 0 0 4px #e8bd70,
+        0 4px 9px rgba(95, 48, 10, .15);
+      overflow: hidden;
+    }
+    .memory-stamp img {
+      width: 72%;
+      height: 68%;
+      min-height: 0;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+    .stamp-ornament {
+      color: #a36a1b;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: 2px;
+      flex-shrink: 0;
+    }
+    .stamp-bottom {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 859px) {
+      .wedding-video {
+        max-height: min(40vh, 340px);
+      }
+      .memory-collage {
+        gap: 6px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -662,33 +906,53 @@
   <!-- Ambient Royal Texture & Floating Marigold Petals -->
   <div class="royal-bg-pattern"></div>
   <canvas id="petalsCanvas"></canvas>
-
+<!-- Four Corners of the Viewport -->
+  <div class="viewport-swastik-layer" aria-hidden="true">
+    <img src="https://hridendra27.github.io/Shristi/s.png" class="viewport-swastik swastik-top-left" alt="">
+    <img src="https://hridendra27.github.io/Shristi/s.png" class="viewport-swastik swastik-top-right" alt="">
+    <img src="https://hridendra27.github.io/Shristi/s.png" class="viewport-swastik swastik-bottom-left" alt="">
+    <img src="https://hridendra27.github.io/Shristi/s.png" class="viewport-swastik swastik-bottom-right" alt="">
+  </div>
   <!-- Top Minimal Header Bar -->
-  <header class="relative z-20 w-full max-w-4xl px-3 pt-2.5 pb-1 flex items-center justify-between text-amber-100/90">
-    <div class="flex items-center gap-2">
-      <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-sm">ॐ</span>
-      <div>
-        <h1 class="font-cinzel text-xs sm:text-sm tracking-wider text-amber-200 font-bold leading-tight">
-          HRIDENDRA WEDS SHRISTI
-        </h1>
-        <p class="text-[10px] sm:text-xs text-amber-200/75 font-devanagari">
-          शुक्रवार, 11 दिसम्बर, 2026 • शुभ विवाह निमंत्रण
-        </p>
+ <header class="relative z-20 w-full max-w-6xl px-3 pt-2.5 pb-1 text-amber-100/90">
+    <div class="flex flex-wrap lg:flex-nowrap items-center justify-between gap-2">
+      <!-- Left: Emblem & Title -->
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="inline-flex shrink-0 items-center justify-center w-7 h-7 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-sm">ॐ</span>
+        <div class="truncate">
+          <h1 class="font-cinzel text-xs sm:text-sm tracking-wider text-amber-200 font-bold leading-tight truncate">
+            HRIDENDRA WEDS SHRISTI
+          </h1>
+          <p class="text-[10px] sm:text-xs text-amber-200/75 font-devanagari truncate">
+            शुक्रवार, 11 दिसम्बर, 2026 • शुभ विवाह निमंत्रण
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="flex items-center gap-2">
-      <!-- Page Indicator Pill -->
-      <span id="pageIndicator" class="px-2.5 py-1 rounded-full text-[11px] sm:text-xs font-medium bg-black/35 border border-amber-400/40 text-amber-200 backdrop-blur-sm">
-        Page 1 of 6
-      </span>
+      <!-- Right: Same-Line Countdown + Action Buttons -->
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ml-auto">
+        <div id="headerCountdown" class="header-countdown-inline" aria-live="polite">
+          <span class="header-countdown-label">शेष :</span>
+          <span class="header-countdown-clock">
+            <span class="header-time-chip"><strong>--</strong><span>दिन</span></span>
+            <span class="header-time-chip"><strong>--</strong><span>घं</span></span>
+            <span class="header-time-chip"><strong>--</strong><span>मि</span></span>
+            <span class="header-time-chip"><strong>--</strong><span>से</span></span>
+          </span>
+        </div>
 
-      <!-- Audio Chime / Ambient Shehnai Toggle -->
-      <button id="audioToggleBtn" type="button" title="Toggle Sacred Chime & Ambient Melody"
-        class="royal-btn px-2.5 py-1 rounded-full text-xs flex items-center gap-1.5 cursor-pointer">
-        <span id="audioIcon">🔇</span>
-        <span class="hidden sm:inline" id="audioLabel">Sound Off</span>
-      </button>
+        <button id="msgFromUsBtn" type="button" onclick="openWeddingMsg()"
+          class="gold-btn px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs flex items-center gap-1 cursor-pointer whitespace-nowrap">
+          <span>💌</span>
+          <span>A Message From Us</span>
+        </button>
+
+        <button id="audioToggleBtn" type="button" title="Toggle Sacred Chime & Ambient Melody"
+          class="royal-btn px-2.5 py-1 rounded-full text-xs flex items-center gap-1.5 cursor-pointer whitespace-nowrap">
+          <span id="audioIcon">🔇</span>
+          <span class="hidden sm:inline" id="audioLabel">Sound Off</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -707,7 +971,6 @@
             <div class="spine-crease-left"></div>
             <div class="ornate-frame justify-between text-center">
 
-              <!-- Corner Ornaments -->
               <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none">
                 <path d="M2 38V14C2 7.37258 7.37258 2 14 2H38" stroke="#f3cf7a" stroke-width="2"/>
                 <circle cx="10" cy="10" r="3" fill="#f3cf7a"/>
@@ -727,9 +990,7 @@
                 <circle cx="10" cy="10" r="3" fill="#f3cf7a"/>
               </svg>
 
-              <!-- Top Royal Arch & Title Badge -->
               <div class="pt-1">
-                <!-- Decorative Mandala Crest -->
                 <svg class="w-16 h-10 mx-auto mb-1 sacred-glow" viewBox="0 0 120 65" fill="none">
                   <path d="M10 58 C25 22, 48 14, 60 5 C72 14, 95 22, 110 58" stroke="#f7d97e" stroke-width="1.8" fill="none"/>
                   <path d="M22 58 C34 30, 50 22, 60 15 C70 22, 86 30, 98 58" stroke="#e2af4b" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
@@ -743,7 +1004,7 @@
                   </span>
                 </div>
               </div>
-              <!-- Main Hindi Couple Header -->
+
               <div class="my-auto py-1">
                 <div class="px-3 py-2.5 rounded-xl border border-amber-300/40 bg-gradient-to-b from-amber-500/10 via-amber-400/5 to-amber-500/10 shadow-inner">
                   <h2 class="font-rozha text-2xl sm:text-3xl gold-foil-light tracking-wide leading-snug">
@@ -771,11 +1032,10 @@
                 </div>
               </div>
 
-              <!-- Bottom Envelope / Address Block -->
               <div class="text-left bg-black/25 border border-amber-300/45 rounded-lg p-2.5 text-[11px] sm:text-xs leading-relaxed text-amber-100/95 space-y-1.5">
                 <div class="border-b border-amber-300/25 pb-1">
                   <p class="text-amber-300 font-semibold">प्रतिष्ठा में,</p>
-                  <p class="pl-3 recipient-handwritten" id="inviteeName">आदरणीय अतिथि एवं सह परिवार</p>
+                  <p class="pl-3 recipient-handwritten" id="inviteeName">आदरणीय अतिथि एवं सपरिवार</p>
                 </div>
                 <div class="text-right">
                   <p class="text-amber-300 font-bold">प्रेषक :</p>
@@ -788,13 +1048,10 @@
                 </div>
               </div>
 
-              <!-- Subtle Footer Stamp -->
-              <div class="pt-1 flex items-center justify-between text-[9.5px] text-amber-300/75 font-cinzel tracking-widest">
-                <!--<span>HRIDENDRA WEDS SHRISTI</span>-->
-                <span>1 / 4</span>
+              <div class="pt-1 flex items-center justify-end text-[9.5px] text-amber-300/75 font-cinzel tracking-widest">
+                <span>1 / 6</span>
               </div>
             </div>
-           <!-- <span class="page-curl-hint">खोलें / Next ➔</span>-->
           </section>
 
           <!-- PAGE 2: INSIDE LEFT (Main Invitation & Family) -->
@@ -802,7 +1059,6 @@
             <div class="spine-crease-right"></div>
             <div class="ornate-frame justify-between text-center text-[#450914]">
 
-              <!-- Corner Ornaments -->
               <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none">
                 <path d="M2 38V14C2 7.37258 7.37258 2 14 2H38" stroke="#9e6d1f" stroke-width="1.8"/>
                 <circle cx="9" cy="9" r="2.5" fill="#8a1326"/>
@@ -812,7 +1068,6 @@
                 <circle cx="9" cy="9" r="2.5" fill="#8a1326"/>
               </svg>
 
-              <!-- Top Sacred Shloka Invocation -->
               <div class="pt-0.5">
                 <p class="text-xs sm:text-sm font-bold text-[#8a1326] tracking-wide">
                   ।। श्री गणेशाय नमः ।।
@@ -823,14 +1078,14 @@
                 </p>
                 <div class="w-32 h-[1px] mx-auto my-1.5 bg-gradient-to-r from-transparent via-amber-700/60 to-transparent"></div>
               </div>
-<img src="https://hridendra27.github.io/Shristi/GaneshJee.png" alt="Shree Ganesh" class="ganesh-above-names">
-              <!-- Main Invitation Body -->
+
+              <img src="https://hridendra27.github.io/Shristi/GaneshJee.png" alt="Shree Ganesh" class="ganesh-above-names">
+
               <div class="my-auto space-y-1.5 px-1">
                 <p class="text-xs sm:text-[13px] font-semibold text-[#5a0d1b]">
                   परमपिता परमेश्वर की असीम अनुकम्पा से
                 </p>
 
-                <!-- Groom Details -->
                 <div class="py-1 px-2 rounded-lg bg-amber-500/10 border border-amber-700/25">
                   <h3 class="font-rozha text-xl sm:text-2xl text-[#8a1326] leading-tight">
                     चि. हृदेन्द्र कुमार श्रीवास्तव
@@ -840,7 +1095,6 @@
                   </p>
                 </div>
 
-                <!-- Sang Badge -->
                 <div class="flex items-center justify-center gap-2">
                   <span class="h-[1px] w-8 bg-amber-700/50"></span>
                   <span class="text-xs sm:text-sm font-bold text-[#8a1326] px-2.5 py-0.5 rounded-full bg-red-900/10 border border-amber-700/35">
@@ -849,7 +1103,6 @@
                   <span class="h-[1px] w-8 bg-amber-700/50"></span>
                 </div>
 
-                <!-- Bride Details -->
                 <div class="py-1 px-2 rounded-lg bg-amber-500/10 border border-amber-700/25">
                   <h3 class="font-rozha text-xl sm:text-2xl text-[#8a1326] leading-tight">
                     आयु. सृष्टि श्रीवास्तव
@@ -862,13 +1115,11 @@
                   </p>
                 </div>
 
-                <!-- Formal Request Text -->
                 <p class="text-[11px] sm:text-[12px] font-medium text-[#3b0912] leading-relaxed pt-0.5">
                   की मांगलिक बेला पर आपको सादर आमंत्रित करते हैं। इस शुभ अवसर पर पधार कर नवयुगल को शुभ आशीर्वाद प्रदान कर हमें कृतार्थ करें।
                 </p>
               </div>
 
-              <!-- Bottom Two-Column Family Section -->
               <div class="grid grid-cols-2 gap-2 pt-1.5 border-t border-amber-700/35 text-[10px] sm:text-[11px] leading-snug">
                 <div class="text-left bg-amber-900/5 p-1.5 rounded border border-amber-700/20">
                   <p class="font-bold text-[#8a1326] underline decoration-amber-600/60 mb-0.5">
@@ -890,17 +1141,16 @@
                     <p class="font-semibold text-[#3a0812]">स्व. श्री हरीश श्रीवास्तव</p>
                     <p class="font-bold text-[#3a0812]">श्रीमती वीणा श्रीवास्तव</p>
                   </div>
-                  <span class="text-[9px] text-amber-800/70 font-cinzel mt-1">2 / 4</span>
+                  <span class="text-[9px] text-amber-800/70 font-cinzel mt-1">2 / 6</span>
                 </div>
               </div>
 
             </div>
-         <!--   <span class="page-curl-hint">⬅ पिछला / अगला ➔</span>-->
           </section>
         </div>
 
         <!-- =========================================================
-             LEAF 2: FRONT = PAGE 3 (Inside Right) | BACK = PAGE 4 (Back Cover)
+             LEAF 2: FRONT = PAGE 3 (Inside Right) | BACK = PAGE 4 (Venue & Blessings)
              ========================================================= -->
         <div class="leaf" id="leaf2" style="z-index: 3;">
 
@@ -909,27 +1159,20 @@
             <div class="spine-crease-left"></div>
             <div class="ornate-frame justify-between text-center text-[#450914]">
 
-              <!-- Top Traditional Couple Mandap & Baraat Vector Illustration -->
               <div class="flex items-center justify-center gap-2 pt-0.5">
-                <!-- Mandap & Couple Line-Art SVG -->
                 <svg class="w-16 h-16 shrink-0" viewBox="0 0 100 100" fill="none">
-                  <!-- Arch -->
                   <path d="M14 88 V35 C14 20, 35 14, 50 6 C65 14, 86 20, 86 35 V88" stroke="#8a1326" stroke-width="2.2"/>
                   <path d="M20 88 V38 C20 26, 38 20, 50 13 C62 20, 80 26, 80 38 V88" stroke="#c8963e" stroke-width="1.2" stroke-dasharray="2 2"/>
-                  <!-- Hanging Garlands -->
                   <path d="M30 26 V42 M40 20 V46 M50 14 V38 M60 20 V46 M70 26 V42" stroke="#c8963e" stroke-width="1"/>
                   <circle cx="50" cy="41" r="3" fill="#8a1326"/>
-                  <!-- Bride & Groom Silhouettes -->
                   <circle cx="43" cy="54" r="4" fill="#8a1326"/>
                   <path d="M36 86 L40 60 L46 60 L49 86 Z" fill="#8a1326"/>
                   <circle cx="57" cy="52" r="4.2" fill="#5e0918"/>
                   <path d="M51 86 L53 58 L61 58 L63 86 Z" fill="#5e0918"/>
-                  <!-- Varmala / Hands Joined -->
                   <path d="M45 64 Q50 69 55 64" stroke="#c8963e" stroke-width="1.8" fill="none"/>
                   <line x1="8" y1="88" x2="92" y2="88" stroke="#8a1326" stroke-width="2.5"/>
                 </svg>
 
-                <!-- Ganesha Invocation with Swastikas -->
                 <div class="text-center flex-1">
                   <p class="text-xs font-bold text-[#8a1326]">।। श्री गणेशाय नमः ।।</p>
                   <p class="text-[10.5px] sm:text-[11px] font-bold text-[#5e1420] leading-snug mt-0.5">
@@ -938,24 +1181,18 @@
                   </p>
                 </div>
 
-                <!-- Royal Baraat Ghodi Line-Art SVG -->
                 <svg class="w-16 h-16 shrink-0" viewBox="0 0 110 95" fill="none">
-                  <!-- Royal Chhatri (Umbrella) -->
                   <path d="M38 24 Q55 8 72 24 Z" fill="#8a1326" stroke="#c8963e" stroke-width="1.2"/>
                   <line x1="55" y1="24" x2="48" y2="54" stroke="#8a1326" stroke-width="1.5"/>
-                  <!-- Groom on Horse -->
                   <circle cx="62" cy="33" r="4" fill="#5e0918"/>
                   <path d="M57 38 L66 38 L68 53 L55 53 Z" fill="#8a1326"/>
-                  <!-- Horse Body & Legs -->
                   <path d="M42 56 Q62 52 78 55 L86 42 L93 46 L84 62 L86 84 M76 63 L76 84 M50 64 L46 84 M42 62 L38 84" stroke="#5e0918" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M42 56 Q34 62 36 74" stroke="#c8963e" stroke-width="1.8" stroke-linecap="round"/>
                   <line x1="12" y1="86" x2="98" y2="86" stroke="#c8963e" stroke-width="1.5"/>
                 </svg>
               </div>
 
-              <!-- 4 Sacred Wedding Events List -->
               <div class="space-y-1.5 my-auto text-left">
-                <!-- Event 1 -->
                 <div class="event-pill flex items-center justify-between gap-2">
                   <div>
                     <h4 class="font-bold text-xs sm:text-[13px] text-[#8a1326]">हल्दी एवं मटकोर</h4>
@@ -968,7 +1205,6 @@
                   </span>
                 </div>
 
-                <!-- Event 2 -->
                 <div class="event-pill flex items-center justify-between gap-2">
                   <div>
                     <h4 class="font-bold text-xs sm:text-[13px] text-[#8a1326]">मातृका पूजन</h4>
@@ -981,7 +1217,6 @@
                   </span>
                 </div>
 
-                <!-- Event 3 (Main Baraat & Wedding) -->
                 <div class="event-pill flex items-center justify-between gap-2 !border-l-[#c8963e] !bg-gradient-to-r !from-[#8a1326]/12 !to-amber-500/15">
                   <div>
                     <h4 class="font-bold text-xs sm:text-[13.5px] text-[#7a0c1e]">बारात प्रस्थान एवं शुभ विवाह</h4>
@@ -994,7 +1229,6 @@
                   </span>
                 </div>
 
-                <!-- Event 4 -->
                 <div class="event-pill flex items-center justify-between gap-2">
                   <div>
                     <h4 class="font-bold text-xs sm:text-[13px] text-[#8a1326]">भीगीं पलकें</h4>
@@ -1007,16 +1241,17 @@
                   </span>
                 </div>
               </div>
-<div class="pt-1 mb-6">
-  <div class="mx-auto w-full max-w-[290px]">
-    <img
-      class="block w-full h-36 sm:h-40 object-contain mx-auto"
-      src="https://hridendra27.github.io/Betrothal/bb.png"
-      alt="युगल श्री गणेश जी का आशीर्वाद लेते हुए"
-    />
-  </div>
-</div>
-              <!-- Venue Note Box at Bottom -->
+
+              <div class="pt-1 mb-2">
+                <div class="mx-auto w-full max-w-[290px]">
+                  <img
+                    class="block w-full h-32 sm:h-36 object-contain mx-auto"
+                    src="https://hridendra27.github.io/Betrothal/bb.png"
+                    alt="युगल श्री गणेश जी का आशीर्वाद लेते हुए"
+                  />
+                </div>
+              </div>
+
               <div class="bg-[#6b0d1e] text-amber-50 rounded-lg p-2 border border-amber-400/70 shadow-sm text-left">
                 <p class="text-[10.5px] sm:text-[11.5px] leading-snug">
                   <span class="font-bold text-amber-300">नोट :</span>
@@ -1026,109 +1261,94 @@
                 </p>
               </div>
 
-              <div class="flex justify-end text-[9px] text-amber-800/70 font-cinzel">
-                <span>3 / 4</span>
+              <div class="flex justify-end text-[9px] text-amber-800/70 font-cinzel mt-1">
+                <span>3 / 6</span>
               </div>
-            
-         <!--    <span class="page-curl-hint">आगे देखें ➔</span> -->
+            </div>
           </section>
 
-          <!-- PAGE 4: BACK COVER (Lord Ganesha Blessing & Swagatakankshi) -->
-          
-<!-- PAGE 4: BACK COVER -->
+          <!-- PAGE 4: GANESH BLESSINGS & VENUE -->
+          <section class="page-face page-back" data-page="4">
+            <div class="spine-crease-right"></div>
 
-<!-- PAGE 4: BACK COVER - GANESH BLESSINGS & VENUE -->
-<section class="page-face page-back" data-page="4">
-    <div class="spine-crease-right"></div>
+            <div class="ornate-frame page4-layout text-center text-[#450914]">
+              <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none">
+                <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
+                <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
+              </svg>
+              <svg class="corner-ornament corner-tr" viewBox="0 0 40 40" fill="none">
+                <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
+                <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
+              </svg>
+              <svg class="corner-ornament corner-bl" viewBox="0 0 40 40" fill="none">
+                <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
+                <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
+              </svg>
+              <svg class="corner-ornament corner-br" viewBox="0 0 40 40" fill="none">
+                <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
+                <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
+              </svg>
 
-    <div class="ornate-frame page4-layout text-center text-[#450914]">
+              <div class="page4-shloka">
+                <p class="text-sm sm:text-base font-bold text-[#8a1326] mb-1">
+                  ॥ श्री गणेशाय नमः ॥
+                </p>
+                <p class="text-xs sm:text-[13px] font-bold text-[#4a0b16] leading-relaxed">
+                  ॥ वक्रतुंड महाकाय सूर्यकोटि समप्रभः ।<br/>
+                  निर्विघ्नं कुरुमे देव सर्वकार्येषु सर्वदा ॥
+                </p>
+              </div>
 
-        <!-- Corner Ornaments -->
-        <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none">
-            <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
-            <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
-        </svg>
-        <svg class="corner-ornament corner-tr" viewBox="0 0 40 40" fill="none">
-            <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
-            <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
-        </svg>
-        <svg class="corner-ornament corner-bl" viewBox="0 0 40 40" fill="none">
-            <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
-            <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
-        </svg>
-        <svg class="corner-ornament corner-br" viewBox="0 0 40 40" fill="none">
-            <path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/>
-            <circle cx="10" cy="10" r="2.8" fill="#8a1326"/>
-        </svg>
-
-        <!-- 1. GANESH SHLOKA -->
-        <div class="page4-shloka">
-            <p class="text-sm sm:text-base font-bold text-[#8a1326] mb-1">
-                ॥ श्री गणेशाय नमः ॥
-            </p>
-
-            <p class="text-xs sm:text-[13px] font-bold text-[#4a0b16] leading-relaxed">
-                ॥ वक्रतुंड महाकाय सूर्यकोटि समप्रभः ।<br/>
-                निर्विघ्नं कुरुमे देव सर्वकार्येषु सर्वदा ॥
-            </p>
-        </div>
-
-        <!-- 2. GANESH JI BLESSING IMAGE -->
-        <div class="page4-image-section">
-            <div class="page4-image-box">
-                <img
+              <div class="page4-image-section">
+                <div class="page4-image-box">
+                  <img
                     src="https://hridendra27.github.io/Betrothal/aa.png"
                     alt="युगल श्री गणेश जी का आशीर्वाद लेते हुए"
-                />
+                  />
+                </div>
+              </div>
+
+              <div class="page4-welcome">
+                <div class="flex items-center justify-center gap-2 text-amber-700 text-xs mb-1">
+                  <span>❖</span><span>❖</span><span>❖</span>
+                </div>
+                <p class="text-sm font-bold text-[#8a1326] mb-1">
+                  स्वागताकांक्षी :
+                </p>
+                <p class="text-xs sm:text-[13px] font-bold text-[#3a0812] leading-snug">
+                  श्री राजकिशोर श्रीवास्तव एवं श्रीमती मधुबाला श्रीवास्तव
+                </p>
+              </div>
+
+              <div class="page4-venue">
+                <p class="text-xs font-bold text-[#8a1326] mb-1">
+                  विवाह स्थल
+                </p>
+                <p class="text-[10px] sm:text-xs text-[#5b321b] leading-snug mb-2">
+                  Bhagwati Garden<br/>
+                  Sector 70, Noida, Uttar Pradesh
+                </p>
+                <a
+  href="https://www.google.com/maps/search/?api=1&query=Bhagwati+Garden+Sector+70+Noida&query_place_id=ChIJUXOGn-TvDDkRLsOzSwDmp-E"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="page4-map-button"
+  title="Open Bhagwati Garden in Google Maps"
+>
+  📍 VIEW VENUE ON GOOGLE MAPS ↗
+</a>
+              </div>
+
+              <div class="page4-footer">
+                <span></span>
+                <span class="font-cinzel">4 / 6</span>
+              </div>
             </div>
-        </div>
-
-        <!-- 3. SWAGATAKANKSHI -->
-        <div class="page4-welcome">
-            <div class="flex items-center justify-center gap-2 text-amber-700 text-xs mb-1">
-                <span>❖</span><span>❖</span><span>❖</span>
-            </div>
-
-            <p class="text-sm font-bold text-[#8a1326] mb-1">
-                स्वागताकांक्षी :
-            </p>
-
-            <p class="text-xs sm:text-[13px] font-bold text-[#3a0812] leading-snug">
-                श्री राजकिशोर श्रीवास्तव एवं श्रीमती मधुबाला श्रीवास्तव
-            </p>
-        </div>
-<div class="page4-venue">
-    <p class="text-xs font-bold text-[#8a1326] mb-1">
-        विवाह स्थल
-    </p>
-    <p class="text-[10px] sm:text-xs text-[#5b321b] leading-snug mb-2">
-        Bhagwati Garden<br/>
-        Sector 70, Noida, Uttar Pradesh
-    </p>
-    <a
-        href="https://www.google.com/maps?q=28.595143095033023,77.38800331002005"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="page4-map-button"
-        onclick="event.stopPropagation(); window.open(this.href, '_blank'); return false;"
-        ontouchstart="event.stopPropagation();"
-        title="Open Bhagwati Garden in Google Maps"
-    >
-        📍 VIEW VENUE ON GOOGLE MAPS ↗
-    </a>
-        </div>
-        <!-- 5. FOOTER -->
-        <div class="page4-footer">
-            <span></span>
-            <span>4 / 4</span>
-        </div>
-    </div>
-</section>
+          </section>
         </div>
 
         <!-- =========================================================
              LEAF 3: FRONT = PAGE 5 (Wedding Film) | BACK = PAGE 6 (Photo Collage)
-             Local assets: media/wedding-film.mp4 and photos/couple-*.jpg
              ========================================================= -->
         <div class="leaf" id="leaf3" style="z-index: 1;">
           <!-- PAGE 5: CENTRAL WEDDING VIDEO -->
@@ -1137,20 +1357,25 @@
             <div class="ornate-frame justify-between text-center text-[#450914]">
               <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none"><path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/><circle cx="10" cy="10" r="3" fill="#8a1326"/></svg>
               <svg class="corner-ornament corner-tr" viewBox="0 0 40 40" fill="none"><path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/><circle cx="10" cy="10" r="3" fill="#8a1326"/></svg>
-              <div class="pt-3">
+
+              <div class="pt-2">
                 <p class="text-xs font-bold tracking-[.25em] text-[#9a6b22]">A MOMENT TO REMEMBER</p>
-                <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-[#8a1326] mt-1">Our Wedding Film</h2>
+                <h2 class="font-cinzel text-xl sm:text-3xl font-bold text-[#8a1326] mt-1">Our Wedding</h2>
                 <p class="text-xs text-[#6b3f0e] mt-1">हृदेन्द्र &amp; सृष्टि • शुभ विवाह • 11 दिसम्बर 2026</p>
-                <div class="w-32 h-px mx-auto my-3 bg-gradient-to-r from-transparent via-amber-700 to-transparent"></div>
+                <div class="w-32 h-px mx-auto my-2 bg-gradient-to-r from-transparent via-amber-700 to-transparent"></div>
               </div>
-              <div class="w-full my-auto px-1 sm:px-2">
+
+              <div class="w-full my-auto px-1 sm:px-2" onclick="event.stopPropagation();" ontouchstart="event.stopPropagation();">
                 <div class="video-gold-frame">
-                  <video class="wedding-video" controls playsinline preload="metadata" poster="https://hridendra27.github.io/Betrothal/savethedate.png">
+                  <video id="weddingVideo" class="wedding-video" controls playsinline preload="metadata" poster="https://hridendra27.github.io/Betrothal/savethedate.png">
                     <source src="https://hridendra27.github.io/Betrothal/invite.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
-              <div class="pt-2 flex items-center justify-between text-[9.5px] text-amber-800/75 font-cinzel tracking-widest"><span>5 / 6</span></div>
+
+              <div class="pt-1 flex items-center justify-end text-[9.5px] text-amber-800/75 font-cinzel tracking-widest">
+                <span>5 / 6</span>
+              </div>
             </div>
           </section>
 
@@ -1160,43 +1385,46 @@
             <div class="ornate-frame justify-between text-center text-[#450914]">
               <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none"><path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/><circle cx="10" cy="10" r="3" fill="#8a1326"/></svg>
               <svg class="corner-ornament corner-tr" viewBox="0 0 40 40" fill="none"><path d="M2 38V14C2 7.37 7.37 2 14 2H38" stroke="#9e6d1f" stroke-width="2"/><circle cx="10" cy="10" r="3" fill="#8a1326"/></svg>
-              <div class="pt-2">
-                <p class="text-xs font-bold tracking-[.22em] text-[#9a6b22]">THE BEAUTIFUL BEGINNING</p>
-                <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-[#8a1326] mt-1">Our Memories</h2>
-                <p class="text-xs text-[#6b3f0e] mt-1">कुछ खास पल, हमेशा के लिए</p>
-                <div class="w-32 h-px mx-auto my-2 bg-gradient-to-r from-transparent via-amber-700 to-transparent"></div>
+
+              <div class="pt-1">
+                <p class="text-[11px] font-bold tracking-[.22em] text-[#9a6b22]">THE BEAUTIFUL BEGINNING</p>
+                <h2 class="font-cinzel text-xl sm:text-3xl font-bold text-[#8a1326] mt-0.5">Our Memories</h2>
+                <p class="text-xs text-[#6b3f0e] mt-0.5">कुछ खास पल, हमेशा के लिए</p>
+                <div class="w-32 h-px mx-auto my-1.5 bg-gradient-to-r from-transparent via-amber-700 to-transparent"></div>
               </div>
+
               <div class="memory-collage">
+                <figure class="memory-photo memory-tall">
+                  <img src="https://hridendra27.github.io/Betrothal/WhatsApp%20Image%202026-11-17%20at%2018.40.02.jpeg" alt="Couple portrait">
+                  <figcaption>Forever starts here</figcaption>
+                </figure>
 
-    <figure class="memory-photo memory-tall">
-        <img src="https://hridendra27.github.io/Betrothal/WhatsApp%20Image%202026-11-17%20at%2018.40.02.jpeg" alt="Couple portrait">
-        <figcaption>Forever starts here</figcaption>
-    </figure>
+                <div class="memory-stamp">
+                  <span class="stamp-ornament stamp-top">❧ ♥ ❧</span>
+                  <img src="https://hridendra27.github.io/Betrothal/monogram.png" alt="H&S Wedding Monogram">
+                  <span class="stamp-ornament stamp-bottom">❧ ♥ ❧</span>
+                </div>
 
-    <!-- H&S Wedding Monogram Stamp -->
-    <div class="memory-stamp">
-        <span class="stamp-ornament stamp-top">❧　♥　❧</span>
-        <img src="https://hridendra27.github.io/Betrothal/monogram.png" alt="H&S Wedding Monogram">
-        <span class="stamp-ornament stamp-bottom">❧　♥　❧</span>
-    </div>
+                <figure class="memory-photo memory-wide">
+                  <img src="https://hridendra27.github.io/Betrothal/o.png" alt="A special moment">
+                  <figcaption>Together</figcaption>
+                </figure>
 
-    <figure class="memory-photo memory-wide">
-        <img src="https://hridendra27.github.io/Betrothal/o.png" alt="A special moment">
-        <figcaption>Together</figcaption>
-    </figure>
+                <figure class="memory-photo memory-small">
+                  <img src="https://hridendra27.github.io/Betrothal/WhatsApp%20Image%202026-11-18%20at%2016.13.14.jpeg" alt="A joyful memory">
+                  <figcaption>Our joy</figcaption>
+                </figure>
 
-    <figure class="memory-photo memory-small">
-        <img src="https://hridendra27.github.io/Betrothal/WhatsApp%20Image%202026-11-18%20at%2016.13.14.jpeg" alt="A joyful memory">
-        <figcaption>Our joy</figcaption>
-    </figure>
+                <figure class="memory-photo memory-small">
+                  <img src="https://hridendra27.github.io/Betrothal/Pasted%20image.png" alt="A cherished memory">
+                  <figcaption>Always</figcaption>
+                </figure>
+              </div>
 
-    <figure class="memory-photo memory-small">
-        <img src="https://hridendra27.github.io/Betrothal/Pasted%20image.png" alt="A cherished memory">
-        <figcaption>Always</figcaption>
-    </figure>
-
-</div>
-              <div class="pt-2 flex items-center justify-between text-[9.5px] text-amber-800/75 font-cinzel tracking-widest"><span>WITH LOVE</span><span>6 / 6</span></div>
+              <div class="pt-1.5 flex items-center justify-between text-[9.5px] text-amber-800/75 font-cinzel tracking-widest">
+                <span>WITH LOVE</span>
+                <span>6 / 6</span>
+              </div>
             </div>
           </section>
         </div>
@@ -1206,7 +1434,7 @@
   </main>
 
   <!-- Bottom Interactive Navigation Controls -->
-  <footer class="relative z-20 w-full max-w-3xl px-3 pb-3 pt-1 flex flex-col items-center gap-2 display:none" >
+  <footer class="relative z-20 w-full max-w-3xl px-3 pb-3 pt-1 flex flex-col items-center gap-2">
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
       <button id="prevBtn" type="button" class="royal-btn px-3.5 py-2 rounded-full text-xs sm:text-sm font-semibold flex items-center gap-1.5 cursor-pointer">
         <span>◀</span>
@@ -1223,26 +1451,19 @@
         <span>▶</span>
       </button>
     </div>
-
-    <!-- Direct Page Quick-Jump Dots 
-    <div class="flex items-center gap-2 text-[11px] text-amber-200/80">
-      <button type="button" data-goto="1" class="page-dot px-2 py-0.5 rounded-full border border-amber-400/50 bg-amber-400/25 text-amber-100 font-semibold cursor-pointer">1. आवरण</button>
-      <button type="button" data-goto="2" class="page-dot px-2 py-0.5 rounded-full border border-amber-400/30 hover:border-amber-400/70 cursor-pointer">2. आमंत्रण</button>
-      <button type="button" data-goto="3" class="page-dot px-2 py-0.5 rounded-full border border-amber-400/30 hover:border-amber-400/70 cursor-pointer">3. मांगलिक कार्यक्रम</button>
-      <button type="button" data-goto="4" class="page-dot px-2 py-0.5 rounded-full border border-amber-400/30 hover:border-amber-400/70 cursor-pointer">4. आशीर्वाद</button>
-    </div> -->
   </footer>
-
+<!-- Wedding Message Modal -->
+<div id="weddingMsgModal" onclick="if (event.target === this) closeWeddingMsg()">
+  <div class="wedding-modal-content">
+    <button type="button" class="wedding-modal-close" onclick="closeWeddingMsg()" aria-label="Close">×</button>
+      <h3 style="font-family:'Cinzel Decorative'; color:var(--deep-maroon);">Our Special Note</h3>
+    <p class="text-sm sm:text-base text-[#5a0d1b] mt-1 font-devanagari">
+      आदरणीय <strong id="popupGuestName" class="text-[#8a1326]">अतिथि</strong>,
+    </p>
+    <p id="fullWeddingMsg" class="wedding-modal-quote font-devanagari !not-italic"></p>
+  </div>
+</div>
   <script>
-    /**
-     * Interactive 3D Royal Wedding Invitation Controller
-     * Handles:
-     * 1. Responsive 3D Flipbook Physics (2-Page Spread on Desktop + Single-Page 3D Turn on Mobile)
-     * 2. Touch Swipe, Click-to-Turn, Keyboard Arrow Keys, and Button Navigation
-     * 3. 3D Parallax Tilt-on-Hover
-     * 4. Web Audio API Ceremonial Tanpura/Chime & Realistic Paper Rustle Sound Effects
-     * 5. Floating Golden Marigold Petals & Shimmer Particle System
-     */
     (function () {
       const book3d = document.getElementById('book3d');
       const tiltRig = document.getElementById('tiltRig');
@@ -1250,6 +1471,7 @@
       const leaf1 = document.getElementById('leaf1');
       const leaf2 = document.getElementById('leaf2');
       const leaf3 = document.getElementById('leaf3');
+      const weddingVideo = document.getElementById('weddingVideo');
 
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
@@ -1262,10 +1484,8 @@
       const audioIcon = document.getElementById('audioIcon');
       const audioLabel = document.getElementById('audioLabel');
 
-      // Current active page: 1, 2, 3, or 4
+      const TOTAL_PAGES = 6;
 
-      // Personalize the recipient using a UTF-8 Base64-encoded filename.
-      // Example: <base64-encoded-name>.html
       function getRecipientFromFilename() {
         const filename = decodeURIComponent(window.location.pathname.split('/').pop() || '');
         const encoded = filename.replace(/\.html?$/i, '').trim();
@@ -1308,8 +1528,50 @@
           audioCtx.resume();
         }
       }
+      // ==========================================================
+      // 1B. EXTRACTED WEDDING COUNTDOWN (TOP HEADER)
+      // ==========================================================
+      const weddingTargetTime = new Date("December 11, 2026 20:00:00").getTime();
+      const headerCountdownEl = document.getElementById('headerCountdown');
+      let weddingCountdownInterval = null;
 
-      // Soft parchment page-turn sound
+      function updateHeaderCountdown() {
+        if (!headerCountdownEl) return;
+
+        const diff = weddingTargetTime - Date.now();
+        if (diff <= 0) {
+          headerCountdownEl.innerHTML =
+            `<span class="header-countdown-label">✨ <strong>मंगलमय शुभ विवाह आरंभ!</strong></span>`;
+          if (weddingCountdownInterval) {
+            clearInterval(weddingCountdownInterval);
+            weddingCountdownInterval = null;
+          }
+          return;
+        }
+
+        const days = Math.floor(diff / 86400000);
+        const hrs = Math.floor((diff % 86400000) / 3600000);
+        const mins = Math.floor((diff % 3600000) / 60000);
+        const secs = Math.floor((diff % 60000) / 1000);
+
+        const hh = String(hrs).padStart(2, '0');
+        const mm = String(mins).padStart(2, '0');
+        const ss = String(secs).padStart(2, '0');
+
+        headerCountdownEl.innerHTML = `
+          <span class="header-countdown-label">शुभ विवाह में शेष :</span>
+          <span class="header-countdown-clock">
+            <span class="header-time-chip"><strong>${days}</strong><span>दिन</span></span>
+            <span class="header-time-chip"><strong>${hh}</strong><span>घं</span></span>
+            <span class="header-time-chip"><strong>${mm}</strong><span>मि</span></span>
+            <span class="header-time-chip"><strong>${ss}</strong><span>से</span></span>
+          </span>
+        `;
+      }
+
+      updateHeaderCountdown();
+      weddingCountdownInterval = setInterval(updateHeaderCountdown, 1000);
+
       function playPageFlipSound() {
         if (!soundEnabled) return;
         try {
@@ -1336,12 +1598,9 @@
           noise.connect(filter);
           filter.connect(audioCtx.destination);
           noise.start();
-        } catch (e) {
-          // Ignore audio errors on restricted devices
-        }
+        } catch (e) {}
       }
 
-      // Gentle auspicious temple bell / tanpura chime
       function playAuspiciousChime(freq = 523.25) {
         if (!soundEnabled) return;
         try {
@@ -1370,12 +1629,10 @@
           initAudio();
           audioIcon.textContent = '🔔';
           audioLabel.textContent = 'Sound On';
-          // Play auspicious Sa-Pa-Sa wedding chime
           playAuspiciousChime(523.25);
           setTimeout(() => playAuspiciousChime(783.99), 260);
           setTimeout(() => playAuspiciousChime(1046.50), 520);
 
-          // Subtle periodic temple bell shimmer
           const notes = [523.25, 587.33, 659.25, 783.99, 880.0];
           let idx = 0;
           ambientInterval = setInterval(() => {
@@ -1391,25 +1648,33 @@
         }
       });
 
-      // ==========================================================
+     // ==========================================================
       // 2. 3D PAGE RENDERING & STATE SYNCHRONIZATION
       // ==========================================================
       function updateBookState(playAudio = true) {
         isDesktopSpread = window.innerWidth >= 860;
         if (playAudio) playPageFlipSound();
 
+        // Pause video when leaving Page 5 so transitions stay smooth
+        if (weddingVideo && currentPage !== 5 && !weddingVideo.paused) {
+          weddingVideo.pause();
+        }
+
         const allFaces = document.querySelectorAll('.page-face');
+        const allLeaves = [leaf1, leaf2, leaf3];
 
         if (isDesktopSpread) {
-          // Reset mobile inline overrides
+          // Reset mobile & desktop visibility classes + inline overrides
+          allLeaves.forEach((leaf) => leaf.classList.remove('active-leaf'));
           allFaces.forEach((face) => {
+            face.classList.remove('mobile-active', 'mobile-prev', 'mobile-next', 'desktop-visible');
             face.style.opacity = '';
             face.style.pointerEvents = '';
             face.style.transform = '';
+            face.style.visibility = '';
           });
 
           if (currentPage === 1) {
-            // Closed Front Cover
             book3d.classList.remove('spread-open', 'spread-back');
             leaf1.classList.remove('flipped');
             leaf2.classList.remove('flipped');
@@ -1417,8 +1682,8 @@
             leaf1.style.zIndex = 4;
             leaf2.style.zIndex = 3;
             leaf3.style.zIndex = 1;
+            document.querySelector('[data-page="1"]').classList.add('desktop-visible');
           } else if (currentPage === 2 || currentPage === 3) {
-            // Open Inside Spread (Page 2 Left + Page 3 Right)
             book3d.classList.add('spread-open');
             book3d.classList.remove('spread-back');
             leaf1.classList.add('flipped');
@@ -1427,72 +1692,72 @@
             leaf1.style.zIndex = 3;
             leaf2.style.zIndex = 4;
             leaf3.style.zIndex = 1;
-          } else if (currentPage === 4) {
-            // Closed Back Cover (Page 4)
-            book3d.classList.remove('spread-open');
-            book3d.classList.add('spread-back');
+            document.querySelector('[data-page="2"]').classList.add('desktop-visible');
+            document.querySelector('[data-page="3"]').classList.add('desktop-visible');
+          } else if (currentPage === 4 || currentPage === 5) {
+            book3d.classList.add('spread-open');
+            book3d.classList.remove('spread-back');
             leaf1.classList.add('flipped');
             leaf2.classList.add('flipped');
             leaf3.classList.remove('flipped');
             leaf1.style.zIndex = 2;
-            leaf2.style.zIndex = 5;
-            leaf3.style.zIndex = 1;
-          } else if (currentPage === 5 || currentPage === 6) {
-            book3d.classList.remove('spread-open', 'spread-back');
+            leaf2.style.zIndex = 4;
+            leaf3.style.zIndex = 5;
+            document.querySelector('[data-page="4"]').classList.add('desktop-visible');
+            document.querySelector('[data-page="5"]').classList.add('desktop-visible');
+          } else if (currentPage === 6) {
+            book3d.classList.remove('spread-open');
+            book3d.classList.add('spread-back');
             leaf1.classList.add('flipped');
             leaf2.classList.add('flipped');
-            if (currentPage === 6) leaf3.classList.add('flipped');
-            else leaf3.classList.remove('flipped');
-            leaf1.style.zIndex = 2;
-            leaf2.style.zIndex = 3;
+            leaf3.classList.add('flipped');
+            leaf1.style.zIndex = 1;
+            leaf2.style.zIndex = 2;
             leaf3.style.zIndex = 6;
+            document.querySelector('[data-page="6"]').classList.add('desktop-visible');
           }
         } else {
-          // Mobile Single-Page 3D Card Mode (All 4 pages crisp & centered)
+          // Mobile Single-Page Card Mode (All 6 pages smooth & centered)
           book3d.classList.remove('spread-open', 'spread-back');
           leaf1.classList.remove('flipped');
           leaf2.classList.remove('flipped');
           leaf3.classList.remove('flipped');
 
+          // Activate only the parent leaf containing currentPage
+          const activeLeafIndex = Math.floor((currentPage - 1) / 2);
+          allLeaves.forEach((leaf, idx) => {
+            leaf.classList.toggle('active-leaf', idx === activeLeafIndex);
+            leaf.style.zIndex = idx === activeLeafIndex ? '20' : '1';
+          });
+
           allFaces.forEach((face) => {
             const pNum = parseInt(face.getAttribute('data-page'), 10);
+            face.classList.remove('mobile-active', 'mobile-prev', 'mobile-next', 'desktop-visible');
             if (pNum === currentPage) {
-              face.style.opacity = '1';
-              face.style.pointerEvents = 'auto';
-              face.style.transform = 'rotateY(0deg) scale(1)';
-              face.style.zIndex = '10';
+              face.classList.add('mobile-active');
             } else if (pNum < currentPage) {
-              face.style.opacity = '0';
-              face.style.pointerEvents = 'none';
-              face.style.transform = 'rotateY(-28deg) scale(0.95)';
-              face.style.zIndex = '1';
+              face.classList.add('mobile-prev');
             } else {
-              face.style.opacity = '0';
-              face.style.pointerEvents = 'none';
-              face.style.transform = 'rotateY(28deg) scale(0.95)';
-              face.style.zIndex = '1';
+              face.classList.add('mobile-next');
             }
           });
         }
 
-        // Update Indicator & Button States
-        if (isDesktopSpread && (currentPage === 2 || currentPage === 3)) {
-          pageIndicator.textContent = `Pages 2 & 3 of 6`;
-        } else {
-          pageIndicator.textContent = `Page ${currentPage} of 6`;
+        // Update Indicator (if present) & Button States
+        if (pageIndicator) {
+          if (isDesktopSpread && (currentPage === 2 || currentPage === 3)) {
+            pageIndicator.textContent = `Pages 2 & 3 of ${TOTAL_PAGES}`;
+          } else if (isDesktopSpread && (currentPage === 4 || currentPage === 5)) {
+            pageIndicator.textContent = `Pages 4 & 5 of ${TOTAL_PAGES}`;
+          } else {
+            pageIndicator.textContent = `Page ${currentPage} of ${TOTAL_PAGES}`;
+          }
         }
 
         prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === 6;
+        nextBtn.disabled = currentPage === TOTAL_PAGES;
+        openCloseLabel.textContent = currentPage === 1 ? 'Open Card' : 'Close Card';
 
-        // Open/Close toggle button label
-        if (currentPage === 1) {
-          openCloseLabel.textContent = 'Open Card';
-        } else {
-          openCloseLabel.textContent = 'Close Card';
-        }
-
-        // Highlight active quick-jump pill
         pageDots.forEach((dot) => {
           const target = parseInt(dot.getAttribute('data-goto'), 10);
           const isActive =
@@ -1513,11 +1778,10 @@
         if (isDesktopSpread) {
           if (currentPage === 1) currentPage = 2;
           else if (currentPage === 2 || currentPage === 3) currentPage = 4;
-          else if (currentPage === 4) currentPage = 5;
-          else if (currentPage === 5) currentPage = 6;
+          else if (currentPage === 4 || currentPage === 5) currentPage = 6;
           else return;
         } else {
-          if (currentPage < 4) currentPage++;
+          if (currentPage < TOTAL_PAGES) currentPage++;
           else return;
         }
         updateBookState(true);
@@ -1525,9 +1789,8 @@
 
       function goPrev() {
         if (isDesktopSpread) {
-          if (currentPage === 6) currentPage = 5;
-          else if (currentPage === 5) currentPage = 4;
-          else if (currentPage === 4) currentPage = 2;
+          if (currentPage === 6) currentPage = 4;
+          else if (currentPage === 4 || currentPage === 5) currentPage = 2;
           else if (currentPage === 2 || currentPage === 3) currentPage = 1;
           else return;
         } else {
@@ -1537,16 +1800,11 @@
         updateBookState(true);
       }
 
-      // Button Event Listeners
       nextBtn.addEventListener('click', goNext);
       prevBtn.addEventListener('click', goPrev);
 
       openCloseBtn.addEventListener('click', () => {
-        if (currentPage === 1) {
-          currentPage = 2;
-        } else {
-          currentPage = 1;
-        }
+        currentPage = currentPage === 1 ? 2 : 1;
         updateBookState(true);
       });
 
@@ -1563,25 +1821,24 @@
       // Click directly on a page face to flip naturally
       document.querySelectorAll('.page-face').forEach((face) => {
         face.addEventListener('click', (e) => {
-          // Avoid triggering when user selects text
           if (window.getSelection && window.getSelection().toString().length > 0) return;
+          if (e.target.closest('video, a, button')) return;
           const pNum = parseInt(face.getAttribute('data-page'), 10);
 
           if (isDesktopSpread) {
             if (pNum === 1) { currentPage = 2; updateBookState(true); }
             else if (pNum === 2) { currentPage = 1; updateBookState(true); }
             else if (pNum === 3) { currentPage = 4; updateBookState(true); }
-            else if (pNum === 4) { currentPage = 5; updateBookState(true); }
+            else if (pNum === 4) { currentPage = 2; updateBookState(true); }
             else if (pNum === 5) { currentPage = 6; updateBookState(true); }
             else if (pNum === 6) { currentPage = 4; updateBookState(true); }
           } else {
-            if (pNum < 6) { currentPage = pNum + 1; updateBookState(true); }
+            if (pNum < TOTAL_PAGES) { currentPage = pNum + 1; updateBookState(true); }
             else { currentPage = 1; updateBookState(true); }
           }
         });
       });
 
-      // Keyboard Arrow Support
       document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowRight') goNext();
         else if (e.key === 'ArrowLeft') goPrev();
@@ -1669,7 +1926,6 @@
             ctx.arc(0, 0, this.size * 0.45, 0, Math.PI * 2);
             ctx.fill();
           } else {
-            // Marigold petal teardrop
             ctx.fillStyle = '#f59e0b';
             ctx.beginPath();
             ctx.ellipse(0, 0, this.size, this.size * 0.52, 0, 0, Math.PI * 2);
@@ -1701,7 +1957,72 @@
         initParticles();
         animateParticles();
       };
-    })();
+// ==========================================================
+      // 5. RANDOMIZED "A MESSAGE FROM US" (HINDI WEDDING EDITION)
+      // ==========================================================
+      let lastWeddingMessage = -1;
+
+      const weddingMessages = [
+        "हमारे दिल खुशियों से भरे हैं क्योंकि हम आपको अपने विवाह समारोह में सादर आमंत्रित करते हैं। आपकी उपस्थिति हमारे इस पावन उत्सव को पूर्ण बनाएगी।",
+        "हमें अपना जीवनसाथी मिल गया है और हम चाहते हैं कि आप हमारे विवाह के इस शुभ अवसर के साक्षी बनें।",
+        "आपके बिना हम अपने जीवन के इस सबसे बड़े दिन की कल्पना भी नहीं कर सकते। कृपया पधारें और हमारी खुशियों में शामिल हों।",
+        "हमारे विवाह समारोह में पधारकर हमें अपने नए जीवन की शुरुआत करने का आशीर्वाद दें। आपकी शुभकामनाएं हमारे लिए अनमोल हैं।",
+        "हमने सात जन्मों के साथ के लिए 'हाँ' कह दिया है! संगीत, हँसी और खुशियों से भरी इस शाम में हमारे साथ शामिल हों।",
+        "हमारे जीवन का सबसे सुंदर अध्याय शुरू होने जा रहा है, और हम चाहते हैं कि इस शुभ घड़ी में आप हमारे साथ रहें।",
+        "हम हमेशा के लिए एक होने जा रहे हैं और अपने सबसे प्रियजनों को अपने साथ देखना चाहते हैं। हमारे विवाह में अवश्य पधारें!",
+        "आज से दो आत्माएं एक बंधन में बंधने जा रही हैं। हमारे शुभ विवाह समारोह में पधारकर नवयुगल को आशीर्वाद दें।",
+        "हमारे साथ का सफर अब अपने सबसे पवित्र पड़ाव पर पहुँच गया है। कृपया हमारे विवाह उत्सव में शामिल होकर हमारी शोभा बढ़ाएं।",
+        "हम विवाह के बंधन में बंधने जा रहे हैं! आइए, परिवार, प्रेम और हमारे उज्ज्वल भविष्य के इस उत्सव में हमारे साथ शामिल हों।",
+        "प्रेम ने हमें एक किया है, और आपकी गरिमामयी उपस्थिति हमारी इस शाम को यादगार बना देगी।",
+        "हमें अपनी यह अपार खुशी आपके साथ साझा करते हुए अत्यंत हर्ष हो रहा है। कृपया सपरिवार पधारकर हमें अनुग्रहीत करें।",
+        "अपनों के स्नेह और आशीर्वाद के बीच हम गृहस्थ जीवन में कदम रखने जा रहे हैं। इस मांगलिक बेला पर आपका हार्दिक स्वागत है।",
+        "एक प्यारी सी मुस्कान से शुरू हुआ यह सफर अब सात फेरों के पवित्र बंधन तक पहुँच गया है। हमारे विवाह में ज़रूर आएं!",
+        "हमने हमेशा साथ निभाने का फैसला किया है! आइए, स्नेह भोज, हँसी-खुशी और आशीर्वाद के साथ हमारे विवाह का जश्न मनाएं।",
+        "खुशियों के इस पावन अवसर पर अपनों का साथ सबसे ज़रूरी है। हमारे शुभ विवाह में पधारकर हमें कृतार्थ करें।",
+        "साथ मिलकर जीवन और भी सुंदर हो जाता है! हमारे विवाह समारोह में पधारें और स्नेह व आनंद से भरी इस शाम का हिस्सा बनें।",
+        "हम पवित्र वैवाहिक बंधन में बंधने जा रहे हैं! इस मंगलमय अवसर पर आपकी उपस्थिति और आशीर्वाद की कामना करते हैं।",
+        "आप हमेशा हमारी जीवन यात्रा का अहम हिस्सा रहे हैं, अब हमारे वैवाहिक जीवन के इस नए अध्याय की शुरुआत में भी हमारे साथ जुड़ें।",
+        "हाथों में हाथ थामे हम जीवन भर के साथ के लिए तैयार हैं। हमारे विवाह उत्सव में पधारकर हमें अपना स्नेह प्रदान करें।",
+        "शहनाइयां गूंजने को तैयार हैं और उत्सव शुरू होने वाला है! कृपया हमारे शुभ विवाह समारोह में सपरिवार पधारें।",
+        "जीवन भर के इस सुंदर सफर की शुरुआत में हमारे साथ शामिल होकर इस रात को अविस्मरणीय बनाएं। सस्नेह — हृदेन्द्र एवं सृष्टि।"
+      ];
+
+      function pickWeddingMessage() {
+        let index;
+        do {
+          index = Math.floor(Math.random() * weddingMessages.length);
+        } while (weddingMessages.length > 1 && index === lastWeddingMessage);
+        lastWeddingMessage = index;
+        return weddingMessages[index];
+      }
+
+      function setRandomWeddingMessage() {
+        const message = pickWeddingMessage();
+        const fullMsg = document.getElementById('fullWeddingMsg');
+        if (fullMsg) {
+          fullMsg.textContent = '“' + message + '”';
+        }
+      }
+
+      window.openWeddingMsg = function () {
+        const popupName = document.getElementById('popupGuestName');
+        if (popupName) {
+          popupName.textContent = recipientName ? (recipientName + ' जी') : 'अतिथि';
+        }
+        setRandomWeddingMessage();
+        const modal = document.getElementById('weddingMsgModal');
+        if (modal) modal.style.display = 'flex';
+      };
+
+      window.closeWeddingMsg = function () {
+        const modal = document.getElementById('weddingMsgModal');
+        if (modal) modal.style.display = 'none';
+      };
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') window.closeWeddingMsg();
+      });
+})();
   </script>
 </body>
 </html>
